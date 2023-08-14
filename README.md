@@ -1,2 +1,2 @@
 # Embedded_interview_T8
-code C 
+Knowledge and practice in Embedded of Embedded Interview T8 
