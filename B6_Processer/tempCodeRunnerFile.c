@@ -1,0 +1,1 @@
+printf("Day la ham %s ", (string * )ten);\
