@@ -37,12 +37,20 @@ void ADD_GIOHANG(uint8_t *gio_hang, DO_DUNG_CA_NHAN ten_do_dung)
 
 void CHECK_GIOHANG(uint8_t *gio_hang, DO_DUNG_CA_NHAN ten_do_dung)
 {
-    if((*gio_hang & ten_do_dung) == ten_do_dung )
+    printf("CHeck gio hang\n");
+
+    for(int i =0; i<8; i++)
     {
-        printf("Co hang:%s\n", ten_do_dung);
-    }else{
-        printf("Khong co:\n");
+        DO_DUNG_CA_NHAN check_do = 1 <<i;
+        if ((*gio_hang & check_do) == ten_do_dung ) 
+        {
+            printf("%s\n", tendungcu(check_do));
+        }else{
+            printf("LOI LOI\n");
+        }
+
     }
+   
 }
 
 void SHOW_GIOHANG(uint8_t *gio_hang)
