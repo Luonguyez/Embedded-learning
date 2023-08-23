@@ -38,16 +38,19 @@ void ADD_GIOHANG(uint8_t *GIO_HANG, DO_DUNG_CA_NHAN ten_do_dung)
 
 void CHECK_GIOHANG(uint8_t *GIO_HANG, DO_DUNG_CA_NHAN ten_do)
 {   
-     printf("\n----------------check--------------\n");
+    printf("\n----------------check--------------\n");
     for (DO_DUNG_CA_NHAN dungcu = AO; dungcu <= TUI; dungcu <<= 1)
     {   
        
-        if ( *GIO_HANG  & dungcu )
-        {
-            printf("%s da co\n ", tendungcu(dungcu));
-        }
-        else{
-            printf("%s chua co\n", tendungcu(dungcu));
+        uint8_t check=1<<dungcu;      
+        if(check & ten_do){
+            printf("%s ",tendungcu(check));
+            if(*GIO_HANG & check){
+                printf("co\n");
+            }
+            else{
+                printf("chua co\n");
+            }
         }
     }
 }
@@ -70,7 +73,7 @@ int main()
 {
     ADD_GIOHANG(&GIO_HANG, AO|QUAN|TUI);
 
-    CHECK_GIOHANG(&GIO_HANG, AO|NHAN );
+    CHECK_GIOHANG(&GIO_HANG, AO|NHAN|QUAN|VAY );
 
     SHOW_GIOHANG(&GIO_HANG);
 
