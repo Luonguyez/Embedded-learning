@@ -30,49 +30,48 @@ static const char *tendungcu(DO_DUNG_CA_NHAN dungcu_value) {
 }
 
 
-void ADD_GIOHANG(uint8_t *gio_hang, DO_DUNG_CA_NHAN ten_do_dung)
+void ADD_GIOHANG(uint8_t *GIO_HANG, DO_DUNG_CA_NHAN ten_do_dung)
 {
-    *gio_hang |= ten_do_dung;
+    *GIO_HANG |= ten_do_dung;
+    
 }
 
-void CHECK_GIOHANG(uint8_t *gio_hang, DO_DUNG_CA_NHAN ten_do_dung)
-{
-    printf("CHeck gio hang\n");
-
-    for(int i =0; i<8; i++)
-    {
-        DO_DUNG_CA_NHAN check_do = 1 <<i;
-        if ((*gio_hang & check_do) == ten_do_dung ) 
+void CHECK_GIOHANG(uint8_t *GIO_HANG, DO_DUNG_CA_NHAN ten_do)
+{   
+     printf("\n----------------check--------------\n");
+    for (DO_DUNG_CA_NHAN dungcu = AO; dungcu <= TUI; dungcu <<= 1)
+    {   
+       
+        if ( *GIO_HANG  & dungcu )
         {
-            printf("%s\n", tendungcu(check_do));
-        }else{
-            printf("LOI LOI\n");
+            printf("%s da co\n ", tendungcu(dungcu));
         }
-
-    }
-   
-}
-
-void SHOW_GIOHANG(uint8_t *gio_hang)
-{
-    printf("DO DUNG CO TRONG GIO HANG\n");
-   
-    for(int i =0; i<8; i++)
-    {
-        DO_DUNG_CA_NHAN hientai = 1 <<i;
-        if (*gio_hang & hientai ) printf("%s\n", tendungcu(hientai));
+        else{
+            printf("%s chua co\n", tendungcu(dungcu));
+        }
     }
 }
 
+void SHOW_GIOHANG(uint8_t *GIO_HANG)
+{   
+    printf("\n------------------showww--------------------\n");
+    for (DO_DUNG_CA_NHAN i = AO; i <= TUI; i<<=1)
+    {   
+        
+        if (*GIO_HANG & i)
+        {
+            printf("%s\n", tendungcu(i) );
+        }
+        
+    }
+    
+}
 int main()
 {
-    uint8_t GIO_HANG = 0;
- 
     ADD_GIOHANG(&GIO_HANG, AO|QUAN|TUI);
 
     CHECK_GIOHANG(&GIO_HANG, AO|NHAN );
 
     SHOW_GIOHANG(&GIO_HANG);
 
-    
 }
