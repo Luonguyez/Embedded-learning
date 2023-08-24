@@ -826,9 +826,9 @@ nhưng code ngắn gọn hơn.
 </details>
 
 <details>
- <summary>BitWise Operarion </summary>
+ <summary>BitWise Operation </summary>
 
- ![Bitwise Operarion](https://making.vn/assets/files/2020-08-09/1596979116-624034-image.png)
+ ![Bitwise Operation](https://making.vn/assets/files/2020-08-09/1596979116-624034-image.png)
 
 - AND (Biểu thức AND): Ký hiệu: `&`.
 
