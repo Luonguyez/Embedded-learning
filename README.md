@@ -916,12 +916,11 @@ int main() {
 }
  ```
 1. Lớp (class) là nơi định nghĩa thông tin về các đối tượng, có thế hiều lớp là một kiếu dữ liệu mà biến của kiếu dữ liệu này được coi như một đối tượng. Trong ví dụ trên thì student là lớp dùng đế mô tả thông tin vé các đối tượng học sinh. 
-Ví dụ về lớp: Học sinh, giáo viên, xe ô tô, ..
+Ví dụ về lớp: Học sinh, giáo viên, xe ô tô.
 2. Đối tượng (object) là một thé hiện của lớp, bạn có thế hiều đối tượng là một biến. Ví dụ trên thì biến s là một đői tượng đại diện cho thông tin của một học sinh
 3. Thuộc tính (attribute): là các đặc điếm của đối tượng, như trong ví dụ trên thì name và age là hai thuộc tính của đối tượng học sinh.
-   
-Ví du về thuộc tính: tên, tuổi, chiều cao, cân nặng, năm sinh
+Ví dụ về thuộc tính: tên, tuổi, chiều cao, cân nặng, năm sinh.
 4. Phương thức (method): là hành vi (hành động) của đối tượng,  ví dụ trên thì display() là một phương thức dùng đế giới thiệu bản thân của học sinh.
-Ví dụ về phương thức: giới thiệu bản thân, học bài, chạy,
+	Ví dụ về phương thức: giới thiệu bản thân, học bài, chạy,
 
 
