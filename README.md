@@ -877,3 +877,9 @@ nhưng code ngắn gọn hơn.
   `a |= b;`
 - Bitwise XOR và Assign (XOR bit và gán): Ký hiệu: `^=`, thực hiện phép XOR bit trên từng cặp bit của hai số và gán lại giá trị cho `a`.
 `a ^= b;`
+
+## PROGRAMMING OOP in C++ 
+
+<details>
+
+<summary>Class and Object</summary>
