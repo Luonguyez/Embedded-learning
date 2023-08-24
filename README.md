@@ -886,3 +886,33 @@ nhưng code ngắn gọn hơn.
 <details>
 
 <summary>Class and Object</summary>
+
+- Lập trình hướng đối tượng được hiểu đơn giản là một phương pháp để giải quyết bài toán lập trình mà khi áp dụng thì code sẽ trở nên dễ phát triển và dễ bảo trì hơn. Phương pháp này sẽ chia nhỏ chương trình thành các đối tượng và các mối quan hệ, mỗi đối tượng sẽ có các thuộc tính (dữ liệu) và hành vi (phương thức).
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Student {
+public:
+    string name;
+    int age;
+
+    void display()
+    {
+        cout <<"Name: "<< name <<endl;
+
+        cout <<"Age: "<< age ;
+    }
+};
+
+int main() {
+    Student s;
+    s.name = Luong;
+    s.age = 22; 
+    s.display(); // Name: Luong
+    		// Age: 
+    return 0;
+}
+ ```
+
