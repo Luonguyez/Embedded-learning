@@ -18,7 +18,7 @@ char string[] ="mot hai ba. bon nam sau bay";
 * Output:
 *   printf the string after capitalize
 */
-void Capwords(char string[]){
+void capWords(char string[]){
     
     for(int i = 0; string[i]!='\0'; i++)
     {
@@ -35,5 +35,5 @@ void Capwords(char string[]){
 
 int main()
 {
-    Capwords(string);
+    capWords(string);
 }
