@@ -1,5 +1,5 @@
 # Embedded
-Knowledge and practice in Embedded of Embedded Interview August .
+Knowledge and practice in Embedded.
 
 ## PROGRAMMING C
 
