@@ -1,4 +1,4 @@
-# Embedded_interview
+# Embedded
 Knowledge and practice in Embedded of Embedded Interview August .
 
 ## PROGRAMMING C
