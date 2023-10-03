@@ -19,17 +19,14 @@ void addStudent(list<student>& studentData){
     while (1)
     {
         string NAME;
-        while(1){
-            cout<<"input name: "; cin>>NAME;
-            if (NAME != "") break;
-        }
+        cout<<"input name: "; cin>>NAME;
 
         int AGE;
         while (1)
         {
             cout<<"input age: "; cin>>AGE;
-            if (AGE > 18 && AGE < 50) break;
-            else cout << "Error, invalid input!" << endl;
+            if (AGE > 18 && AGE < 70) break;
+            else cout << "Error, invalid input!\n";
         }
         
         typeGender GENDER;
@@ -53,20 +50,11 @@ void addStudent(list<student>& studentData){
         }
         
         double scoreMATH;
-        while (1)
-        {
-            cout<<"input score Math: "; cin>>scoreMATH;
-            if(scoreMATH >= 0 && scoreMATH <= 10) break;
-            else cout << "Error, invalid input!" << endl;
-        }
-        
+        cout<<"input score Math: "; cin>>scoreMATH;
+      
         double scorePHYS;
-        while (1)
-        {
-            cout<<"input score Phys: "; cin>>scorePHYS;
-            if(scorePHYS >= 0 && scorePHYS <= 10) break;
-            else cout << "Error, invalid input!" << endl;
-        }
+        cout<<"input score Phys: "; cin>>scorePHYS;
+        if(scorePHYS >= 0 && scorePHYS <= 10) break;
         
         student newStudent(NAME, AGE, GENDER, scoreMATH, scorePHYS);
         studentData.push_back(newStudent);
@@ -75,12 +63,6 @@ void addStudent(list<student>& studentData){
         cout<<"0: Exit add name function\n1: Continue ...\n";
         cout<<"Press: ";
         cin>>key;
-         while (key != 1 && key != 0)
-        {
-            cout << "Error, invalid input!\nPress again: " << endl;
-            cin >> key;
-        }
-
         if (key == 1) continue;
         else if(key == 0) break;
     }
@@ -103,8 +85,6 @@ void updateStudent(list<student>& studentData){
         switch (key)
         {
             case 1:
-                
-                cout << "old name: " << iter->getNAME() << endl;
                 cout <<"update name: ";
                 cin>>name;
                 iter->setNAME(name);
@@ -119,7 +99,7 @@ void updateStudent(list<student>& studentData){
                 {
                     cout << "update age: ";
                     cin >> age;
-                    if (age >= 18 && age < 50)
+                    if (age >= 18 && age < 70)
                         {
                             iter->setAGE(age);
                             break;
@@ -131,7 +111,7 @@ void updateStudent(list<student>& studentData){
             
             case 3:
                 typeGender gender;
-                cout << "old gender: ";
+               
                 if (iter->getGENDER() == 1) cout << "Male" << endl;
                 else cout << "Female" << endl;
                         
@@ -152,16 +132,12 @@ void updateStudent(list<student>& studentData){
                         default:
                             break;
                     }
-                    if (key == 1 || key == 2) break;
-                    else cout << "Error, invalid input!" << endl;
-                    }
                         cout << "Update sucessfully!" << endl;
                 break;
 
             
             case 4:
                 int scoreMath;
-                cout << "old math score: " << iter->getMATH() << endl;
                 while (1)
                 {
                     cout << "update math score: ";
@@ -177,7 +153,6 @@ void updateStudent(list<student>& studentData){
                     break;
             case 5:
                 int scorePhys;
-                cout << "old physical score: " << iter->getMATH() << endl;
                 while (1)
                 {
                     cout << "update physical score: ";
