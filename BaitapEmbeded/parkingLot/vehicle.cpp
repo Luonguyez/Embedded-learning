@@ -40,8 +40,17 @@ class Car{
         string getLicense() const {return this ->licensePlate;};
         void setLicense(string license) { licensePlate = license;};
         Dimension getSize() const {return this->size;};
-        parkingSlot findParkingSlot( vector <parkingSlot>& slots) {
-            if(slots)
+        parkingSlot findParkingSlot( vector <parkingSlot>& slots, Car myCar) {
+            for(int i = 0; i < slots.size(); i++){
+                if(!slots[i].getStatus() && 
+                slots[i].getDimension().getLength() >= myCar.getSize().getLength() && 
+                slots[i].getDimension().getWidth() >= myCar.getSize().getWidth()){
+                    cout << "Have a slot have dimension: ";
+                    cout << slots[i].getDimension().getLength()<<"  ";
+                    cout << slots[i].getDimension().getWidth()<<endl;
+                    cout << "And can be park!";
+                }
+            }
         }
 };
 
@@ -53,11 +62,10 @@ int main(){
         parkingSlot(4.2, 2.2)
     };
 
-    // tao 1 oto voi kich thuoc cu the
+    
     Car Vinfast("75G1", 4.3, 2.3);
-    // in thong bao co vi tri phu hop hay khong
-
-    // in kich thuoc vi tri
-    // kiem tra xe co dau duoc khong
+    
+     Vinfast.findParkingSlot(park_slots, Vinfast);
+   
 
 }
